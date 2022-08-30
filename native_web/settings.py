@@ -15,6 +15,11 @@ from pathlib import Path
 import os
 import django_heroku
 import dj_database_url
+import sys
+if sys.version_info[0] == 3:
+    import tkinter as tk
+else:
+    import Tkinter as tk
 from decouple import Config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
