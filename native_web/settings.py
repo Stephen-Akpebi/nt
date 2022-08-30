@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'native',
     'blog',
-    "bootstrap5"
+    "django_bootstrap5",
+    'crispy_forms',
 ]
 
 CRISPY_TEMPLATE_PACK = 'uni_form'
