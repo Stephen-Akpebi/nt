@@ -1,0 +1,297 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="{% static "img/breadcrumb-bg.jpg" %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h2>Classes detail</h2>
+                        <div class="bt-option">
+                            <a href="{% url 'home' %}">Home</a>
+                            <a href="#">Classes</a>
+                            <span>Body building</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Class Details Section Begin -->
+    <section class="class-details-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="class-details-text">
+                        <div class="cd-pic">
+                            <img src="{% static "img/classes/class-details/class-detailsl.jpg" %}" alt="">
+                        </div>
+                        <div class="cd-text">
+                            <div class="cd-single-item">
+                                <h3>Body buiding</h3>
+                                <p>Bodybuilding focuses on hypertrophy, or muscle growth. 
+                                    Each workout typically focuses on a specific muscle group and incorporates more single-joint exercises such as bicep curls. 
+                                    Training is going to consist of 8 to 12 or 12 to 15 reps for 3 to 6 sets with 45 to 90 seconds of rests. 
+                                    Bodybuilders often “display” their hard work by posing onstage in front of a panel of judges.
+                                    Native gym is ready and willing to help people with every step of their fitness journey,
+                                    Native Fitness is a comprehensive resource that’s motivating and inspiring. Sure, 
+                                    they’ll teach you how to work out and how to prepare a basic meal, but they also focus on helping you fix your own mindset, 
+                                    develop positive habits, and really change your life one step at a time.</p>
+                            </div>
+                            <div class="cd-single-item">
+                                <h3>Trainer</h3>
+                                <p>It’s no surprise that Our Trainers has been hailed as one of the world’s leading body composition experts.
+                                    Thousands of people have experienced success from training with Native's Team by visiting UP Locations Worldwide.
+                                    
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cd-trainer">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="cd-trainer-pic">
+                                        <img src="{% static "img/classes/class-details/cosby.jpg" %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="cd-trainer-text">
+                                        <div class="trainer-title">
+                                            <h4>Cosby</h4>
+                                            <span>Gym Trainer</span>
+                                        </div>
+                                        <div class="trainer-social">
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                            <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                                        </div>
+                                        <p>Cosby, Gym Trainer said Weightlifting, also called Olympic weightlifting,
+                                            is an athletic discipline in the modern Olympic programme in which the athlete 
+                                            attempts a maximum-weight single lift of a barbell loaded with weight plates</p>
+                                        <ul class="trainer-info">
+                                            <li><span>Age</span>35</li>
+                                            <li><span>Weight</span>148lbs</li>
+                                            <li><span>Height</span>10' 2``</li>
+                                            <li><span>Occupation</span>Gym Trainer</li>
+                                        </ul>
+                                        <p>Cycle your way to the ultimate fitness results. Rides are set to a motivational 
+                                            soundtrack and may vary and blend technique, intervals, resistance rides, climbs 
+                                            and sprints for a fun, challenging and rewarding cardio experience. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-8">
+                    <div class="sidebar-option">
+                        <div class="so-categories">
+                            <h5 class="title">Categories</h5>
+                            <ul>
+                                <li><a href="#">Yoga <span>12</span></a></li>
+                                <li><a href="#">Runing <span>32</span></a></li>
+                                <li><a href="#">Weightloss <span>86</span></a></li>
+                                <li><a href="#">Cario <span>25</span></a></li>
+                                <li><a href="#">Body buiding <span>36</span></a></li>
+                                <li><a href="#">Nutrition <span>15</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="so-latest">
+                            <h5 class="title">Latest posts</h5>
+                            <div class="latest-large set-bg" data-setbg="{% static "img/letest-blog/latest-1.jpg" %}">
+                                <div class="ll-text">
+                                    <h5><a href="#">This Japanese Way of Making Iced Coffee In a Game...</a></h5>
+                                    <ul>
+                                        <li>Aug 20, 2019</li>
+                                        <li>20 Comment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="latest-item">
+                                <div class="li-pic">
+                                    <img src="{% static "img/letest-blog/latest-2.jpg" %}" alt="">
+                                </div>
+                                <div class="li-text">
+                                    <h6><a href="#">Grilled Potato and Green Bean Salad</a></h6>
+                                    <span class="li-time">Aug 15, 2019</span>
+                                </div>
+                            </div>
+                            <div class="latest-item">
+                                <div class="li-pic">
+                                    <img src="{% static "img/letest-blog/latest-3.jpg" %}" alt="">
+                                </div>
+                                <div class="li-text">
+                                    <h6><a href="#">The $8 French Rosé I Buy in Bulk Every Summer</a></h6>
+                                    <span class="li-time">Aug 15, 2019</span>
+                                </div>
+                            </div>
+                            <div class="latest-item">
+                                <div class="li-pic">
+                                    <img src="{% static "img/letest-blog/latest-4.jpg" %}" alt="">
+                                </div>
+                                <div class="li-text">
+                                    <h6><a href="#">Ina Garten's Skillet-Roasted Lemon Chicken</a></h6>
+                                    <span class="li-time">Aug 15, 2019</span>
+                                </div>
+                            </div>
+                            <div class="latest-item">
+                                <div class="li-pic">
+                                    <img src="{% static "img/letest-blog/latest-5.jpg" %}" alt="">
+                                </div>
+                                <div class="li-text">
+                                    <h6><a href="#">The Best Weeknight Baked Potatoes, 3 Creative Ways</a></h6>
+                                    <span class="li-time">Aug 15, 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="so-banner set-bg" data-setbg="{% static "img/sidebar-banner.jpg" %}">
+                            <h5>Banner 300x300</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Class Details Section End -->
+
+    <!-- Class Timetable Section Begin -->
+    <section class="class-timetable-section class-details-timetable spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="class-details-timetable_title">
+                        <h5>Classes timetable</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="class-timetable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednesday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                    <th>Saturday</th>
+                                    <th>Sunday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="class-time">5:00am - 8:00am</td>
+                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
+                                        <h5>Power steps & HIIT</h5>
+                                        <span>AEROBICS</span>
+                                        <span>COSBY</span>
+                                    </td>
+                                    <td class="hover-bg ts-meta" data-tsmeta="fitness">
+                                        <h5>BBT</h5>
+                                        <span>ABS CLASS</span>
+                                        <span>COSBY</span>
+                                    </td>
+                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
+                                        <h5>Circuit workout</h5>
+                                        <span>AEROBICS</span>
+                                        <span>COSBY</span>
+                                    </td>
+                                    <td class="hover-bg ts-meta" data-tsmeta="fitness">
+                                        <h5>Lower body work</h5>
+                                        <span>ABS & CORE</span>
+                                        <span>COSBY</span>
+                                    </td>
+                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="motivation">
+                                        <h5>Motivation</h5>
+                                        <span>REST DAY</span>
+                                        <span>COSBY</span>
+                                    </td>
+                                    <td class="hover-bg ts-meta" data-tsmeta="workout">
+                                        <h5>AEROBICS</h5>
+                                        <span>DANCE/WORKOUT</span>
+                                        <span>MIGUEL & COSBY</span>
+                                    </td>
+                                    <td class="dark-bg blank-td"></td>
+                                </tr>
+                                <tr>
+                                    <td class="class-time">10.00am - 12.00am</td>
+                                    <td class="blank-td"></td>
+                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="fitness">
+                                        <h5>Fitness</h5>
+                                        <span>Unavailable</span>
+                                    </td>
+                                    <td class="hover-bg ts-meta" data-tsmeta="workout">
+                                        <h5>WEIGHT LOOSE</h5>
+                                        <span>Unavailable</span>
+                                    </td>
+                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="motivation">
+                                        <h5>Cardio</h5>
+                                        <span>Unavailable</span>
+                                    </td>
+                                    <td class="hover-bg ts-meta" data-tsmeta="workout">
+                                        <h5>Body Building</h5>
+                                        <span>Unavailable</span>
+                                    </td>
+                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="motivation">
+                                        <h5>Karate</h5>
+                                        <span>Unavailable</span>
+                                    </td>
+                                    <td class="blank-td"></td>
+                                </tr>
+                                <tr>
+                                    <td class="class-time">3:00pm - 9.00pm</td>
+                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="fitness">
+                                        <h5>Power steps & HIIT</h5>
+                                        <span>AEROBICS</span>
+                                        <span>MIGUEL</span>
+                                    </td>
+                                    <td class="hover-bg ts-meta" data-tsmeta="motivation">
+                                        <h5>BBT</h5>
+                                        <span>ABS CLASS</span>
+                                        <span>MIGUEL</span>
+                                    </td>
+                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="workout">
+                                        <h5>Circuit workout</h5>
+                                        <span>AEROBICS</span>
+                                        <span>MIGUEL</span>
+                                    </td>
+                                    <td class="hover-bg ts-meta" data-tsmeta="workout">
+                                        <h5>Lower body work</h5>
+                                        <span>ABS & CORE</span>
+                                        <span>MIGUEL</span>
+                                    </td>
+                                    <td class="dark-bg hover-bg ts-meta" data-tsmeta="motivation">
+                                        <h5>Motivation</h5>
+                                        <span>REST DAY</span>
+                                        <span>MIGUEL</span>
+                                    </td>
+                                    <td class="hover-bg ts-meta" data-tsmeta="fitness">
+                                        <h5>AEROBICS</h5>
+                                        <span>DANCE/WORKOUT</span>
+                                        <span>MIGUEL & COSBY</span>
+                                    </td>
+                                    <td class="dark-bg blank-td"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Class Timetable Section End -->
+
+    {% block footer %}
+    {% include 'footer.html' %}
+    {% endblock footer %}
+
+
+
+    {% endblock content %}

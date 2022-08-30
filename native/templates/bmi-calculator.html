@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="{% static "img/breadcrumb-bg.jpg" %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h2>BMI calculator</h2>
+                        <div class="bt-option">
+                            <a href="{% url 'home' %}">Home</a>
+                            <a href="#">Pages</a>
+                            <span>BMI calculator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- BMI Calculator Section Begin -->
+    <section class="bmi-calculator-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title chart-title">
+                        <span>check your body</span>
+                        <h2>BMI CALCULATOR CHART</h2>
+                    </div>
+                    <div class="chart-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Bmi</th>
+                                    <th>WEIGHT STATUS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="point">Below 18.5</td>
+                                    <td>Underweight</td>
+                                </tr>
+                                <tr>
+                                    <td class="point">18.5 - 24.9</td>
+                                    <td>Healthy</td>
+                                </tr>
+                                <tr>
+                                    <td class="point">25.0 - 29.9</td>
+                                    <td>Overweight</td>
+                                </tr>
+                                <tr>
+                                    <td class="point">30.0 - and Above</td>
+                                    <td>Obese</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-title chart-calculate-title">
+                        <span>check your body</span>
+                        <h2>CALCULATE YOUR BMI</h2>
+                    </div>
+                    <div class="chart-calculate-form">
+                        <p>BMI is a number calculated from an individual’s weight and height.
+                            To find out BMI we will take input from the user (both height and weight)
+                            which will be stored in height and weight variable for further calculation.</p>
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p>Height (in cm)</p>
+                                    <input id="height" type="number" placeholder="Height / cm" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+                                </div>
+                                <div class="col-sm-6">
+                                    <p>Weight (in kg)</p>
+                                    <input id="weight" type="number" placeholder="Weight / kg" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+                                </div>
+                                <div class="col-lg-12">
+                                    <button id="btn" type="submit">Calculate</button>
+                                </div>
+                                <div class="col-sm-6"><p id="result"></p>  </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BMI Calculator Section End -->
+    <script>
+        window.onload = () => { 
+        
+            let button = document.querySelector("#btn"); 
+        
+        
+        
+            // Function for calculating BMI 
+        
+            button.addEventListener("click", calculateBMI); 
+        }; 
+        
+        
+        
+        function calculateBMI() { 
+        
+        
+        
+            /* Getting input from user into height variable. 
+        
+            Input is string so typecasting is necessary. */
+        
+            let height = parseInt(document 
+        
+                    .querySelector("#height").value); 
+        
+        
+        
+            /* Getting input from user into weight variable.  
+        
+            Input is string so typecasting is necessary.*/
+        
+            let weight = parseInt(document 
+        
+                    .querySelector("#weight").value); 
+        
+        
+        
+            let result = document.querySelector("#result"); 
+        
+        
+        
+            // Checking the user providing a proper 
+        
+            // value or not 
+        
+            if (height === "" || isNaN(height))  
+        
+                result.innerHTML = "Provide a valid Height!"; 
+        
+        
+        
+            else if (weight === "" || isNaN(weight))  
+        
+                result.innerHTML = "Provide a valid Weight!"; 
+        
+        
+        
+            // If both input is valid, calculate the bmi 
+        
+            else { 
+        
+        
+        
+                // Fixing upto 2 decimal places 
+        
+                let bmi = (weight / ((height * height)  
+        
+                                    / 10000)).toFixed(2); 
+        
+        
+        
+                // Dividing as per the bmi conditions 
+        
+                if (bmi < 18.6) result.innerHTML = 
+        
+                    `Under Weight : <span>${bmi}</span>`; 
+        
+        
+        
+                else if (bmi >= 18.6 && bmi < 24.9)  
+        
+                    result.innerHTML =  
+        
+                        `Normal : <span>${bmi}</span>`; 
+        
+        
+        
+                else result.innerHTML = 
+        
+                    `Over Weight : <span>${bmi}</span>`; 
+        
+            } 
+        } </script>
+    
+    {% block footer %}
+    {% include 'footer.html' %}
+    {% endblock footer %}
+
+    {% endblock content %}

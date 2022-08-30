@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% load bootstrap5 %}
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="{% static "img/breadcrumb-bg.jpg" %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h2>Contact Us</h2>
+                        <div class="bt-option">
+                            <a href="{% url 'home' %}">Home</a>
+                            <a href="#">Pages</a>
+                            <span>Contact us</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Contact Section Begin -->
+    <section class="contact-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title contact-title">
+                        <span>Contact Us</span>
+                        <h2>GET IN TOUCH</h2>
+                    </div>
+                    <div class="contact-widget">
+                        <div class="cw-text">
+                            <i class="fa fa-map-marker"></i>
+                            <p>Ghana/Accra, Near Royal Palm Estate,<br/> GH-0298-0841</p>
+                        </div>
+                        <div class="cw-text">
+                            <i class="fa fa-mobile"></i>
+                            <ul>
+                                <li><a href="tell:+233 553-390-054">+233 553-390-054</a></li>
+                                <li><a href="tell:+233 308-009-424">+233 308-009-424</a></li>
+                            </ul>
+                        </div>
+                        <div class="cw-text email">
+                            <i class="fa fa-envelope"></i>
+                            <p>nativefitness@yahoo.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="leave-comment">
+                        {% include 'messages.html' %}
+                        <form action="" method="post" class="form">
+                            {% csrf_token %}
+                            {{ form }}
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.8511158592455!2d0.05661871452751957!3d5.734571733422547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102081bc3e68bf31%3A0x368c76e55a19513c!2sNATIVE%20FITNESS%20CENTER!5e0!3m2!1sen!2sgh!4v1655286701940!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+    {% block footer %}
+    {% include 'footer.html' %}
+    {% endblock footer %}
+
+    {% endblock content %}

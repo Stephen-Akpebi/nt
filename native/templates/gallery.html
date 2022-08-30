@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="{% static "img/breadcrumb-bg.jpg" %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h2>Gallery</h2>
+                        <div class="bt-option">
+                            <a href="{% url 'home' %}">Home</a>
+                            <a href="#">Pages</a>
+                            <span>Gallery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Gallery Section Begin -->
+    <div class="gallery-section">
+        <div class="gallery">
+            {% for gallery in gallery_list %}
+            <div class="grid-sizer"></div>
+            <div class="gs-item grid-wide set-bg" data-setbg="{{ gallery.image.url }}">
+                <a href="{{ gallery.image.url }}" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            </div>
+            <div class="gs-item set-bg" data-setbg="{{ gallery.image2.url }}">
+                <a href="{{ gallery.image2.url }}" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Gallery Section End -->
+
+    {% block footer %}
+    {% include 'footer.html' %}
+    {% endblock footer %}
+
+
+    {% endblock content %}
