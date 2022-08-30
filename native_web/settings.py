@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'native',
     'blog',
-    'crispy_forms',
     "bootstrap5"
 ]
 
