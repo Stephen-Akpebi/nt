@@ -1,1 +1,1 @@
-web: gunicorn native_web.wsgi
+web: gunicorn native_web.wsgi --log-file -

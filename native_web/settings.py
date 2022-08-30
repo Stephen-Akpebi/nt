@@ -16,10 +16,7 @@ import os
 import django_heroku
 import dj_database_url
 import sys
-if sys.version_info[0] == 3:
-    import tkinter as tk
-else:
-    import Tkinter as tk
+
 from decouple import Config
 
 
@@ -41,7 +38,7 @@ SENDGRID_API_KEY='<your-sendgrid-api-key>'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nativegym.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -108,7 +105,9 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation

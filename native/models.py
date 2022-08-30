@@ -1,7 +1,4 @@
 # Developed by Surfa
-from distutils.command.upload import upload
-from statistics import mode
-from turtle import title
 from django.db import models
 from django.contrib.auth import get_user_model
 # Create your models here.
