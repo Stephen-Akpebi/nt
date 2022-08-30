@@ -81,16 +81,16 @@ class BMI(TemplateView):
     template_name  = 'bmi-calculator.html'
 
 
-class Blog(DetailView):
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
-    def get_queryset(self):
-        return super().get_queryset()
+#class Blog(DetailView):
+    #queryset = Post.objects.filter(status=1).order_by('-created_on')
+    #def get_queryset(self):
+        #return super().get_queryset()
     
-    template_name = 'blog.html'
+    #template_name = 'blog.html'
 
 
-class BlogDetail(DetailView):
-    template_name = 'blog-details.html'
+#class BlogDetail(DetailView):
+    #template_name = 'blog-details.html'
 
 
 class About(generic.ListView):
