@@ -28,6 +28,8 @@ urlpatterns = [
     path('',views.HomePage.as_view(),name='home'),
     path('',
          include('native.urls')),
+    path('',
+         include('blog.urls')),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
