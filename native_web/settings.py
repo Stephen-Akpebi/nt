@@ -144,8 +144,7 @@ LOGGING = {
     }
 }
 
-DEBUG_PROPAGATE_EXCEPTIONS = True
-COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
+
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -199,7 +198,7 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = MEDIA_DIR 
 
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFileStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFileStorage'
 
 # CONTACT_EMAIL = 'contact@example.com'
 # ADMIN_EMAILS = ['admin@example.com', ]
