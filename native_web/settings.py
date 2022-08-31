@@ -198,7 +198,8 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = MEDIA_DIR 
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFileStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFileStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # CONTACT_EMAIL = 'contact@example.com'
 # ADMIN_EMAILS = ['admin@example.com', ]
