@@ -238,3 +238,8 @@ MESSAGE_TAGS = {
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_heroku.settings(locals())
+
+if os.getcwd() == 'app':
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED', 'https')
+    SECURE_SSL_REDIRECT = True 
+    DEBUG = False
