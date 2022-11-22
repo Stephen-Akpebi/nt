@@ -16,9 +16,9 @@ import os
 import django_heroku
 import dj_database_url
 import sys
-
+import cloudinary_storage
 from decouple import Config
-
+import cloudinary
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'blog',
     "django_bootstrap5",
     'crispy_forms',
+    'cloudinary_storage',
+    'cloudinary',
 ]
 
 CRISPY_TEMPLATE_PACK = 'uni_form'
@@ -190,6 +192,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
@@ -236,6 +239,13 @@ MESSAGE_TAGS = {
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'de1m9irun',
+    'API_KEY': '234324812698751',
+    'API_SECRET': '-470BOgDGAyUoBOUWLmaAakRARY',
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 django_heroku.settings(locals())
 
